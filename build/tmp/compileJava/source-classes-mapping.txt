@@ -24,3 +24,7 @@ br/com/fiap/coolshoes/CoolshoesApplication.java
  br.com.fiap.coolshoes.CoolshoesApplication
 br/com/fiap/coolshoes/config/SecurityConfig.java
  br.com.fiap.coolshoes.config.SecurityConfig
+br/com/fiap/coolshoes/entity/User.java
+ br.com.fiap.coolshoes.entity.User
+br/com/fiap/coolshoes/repository/UserRepository.java
+ br.com.fiap.coolshoes.repository.UserRepository
