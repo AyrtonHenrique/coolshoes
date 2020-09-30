@@ -2,7 +2,7 @@ server:
   port: 8088
 
 fiap:
-  debug: false
+  debug: true
 
 springfox:
   documentation:
@@ -16,3 +16,8 @@ spring:
     password: fiap
   jpa:
     show-sql: true
+#  security:
+#    user:
+#      name: fabio
+#      password: senha
+#      roles: ADMIN
