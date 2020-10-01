@@ -1,11 +1,9 @@
 package br.com.fiap.coolshoes.security;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -43,7 +41,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             logger.warn("Token inexistente ou token não Bearer");
         }
 
-        if(username != null && SecurityContextHolder.getContext().getAuthentication() != null){
+        if(username != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UserDetails userDetails = userDetailService.loadUserByUsername(username);
             UsernamePasswordAuthenticationToken userToken = new UsernamePasswordAuthenticationToken(
                     userDetails,
