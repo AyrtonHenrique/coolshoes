@@ -4,6 +4,10 @@ server:
 fiap:
   debug: true
 
+jwt:
+  secret: fiapSecr3t
+  expiration: 5
+
 springfox:
   documentation:
     swagger-ui:
