@@ -1,2 +1,0 @@
-br/com/fiap/coolshoes/CoolshoesApplicationTests.java
- br.com.fiap.coolshoes.CoolshoesApplicationTests
