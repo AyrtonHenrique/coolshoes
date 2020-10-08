@@ -47,6 +47,7 @@ public class CoolshoesbatchChunkApplication {
     @Bean
     public ItemProcessor<Pessoa, Pessoa> itemProcessor(){
         return (pessoa) -> {
+            logger.info(pessoa.getNome() + " processado.");
             pessoa.setNome(pessoa.getNome().toUpperCase());
             pessoa.setCpf(pessoa.getCpf().replaceAll("\\.", "").replace("-",""));
             return pessoa;
@@ -72,6 +73,8 @@ public class CoolshoesbatchChunkApplication {
                 .reader(itemReader)
                 .processor(itemProcessor)
                 .writer(itemWriter)
+                .exe
+                .allowStartIfComplete(true)
                 .build();
     }
 
