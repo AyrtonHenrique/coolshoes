@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class PessoaDocument (
         @Id
-        val id: String,
+        val id: String? = null,
         val nome: String,
         val cpf: String? = null
 )
